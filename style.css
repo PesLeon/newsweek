@@ -1,0 +1,263 @@
+:root {
+    --primarna-boja: #c42902;
+    --sekundarna-boja: #ffffff;
+    --pozadinska-boja: #f7ece8;
+    --linije-boja: rgb(216, 216, 216);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--pozadinska-boja);
+    font-weight: bold;
+}
+
+header {
+    color: var(--sekundarna-boja);
+    background-color: var(--primarna-boja);
+}
+
+#header_div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+#header_div p {
+    width: 15%;
+    margin: 0 0 2% 2%;
+    align-self: flex-end;
+    position: absolute;
+    left: 0;
+    font-weight: 100;
+}
+
+#header_div h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    margin: 1% 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: -5px;
+}
+
+nav {
+    display: flex;
+    background-color: var(--sekundarna-boja);
+    width: 100%;
+    border-bottom: 1px solid var(--linije-boja);
+    align-items: center;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5% 5%;
+    margin: 1% 0;
+}
+
+nav a:nth-child(2) {
+    border-left: 1px solid var(--linije-boja);
+    border-right: 1px solid var(--linije-boja);
+}
+
+nav a:nth-child(3) {
+    border-right: 1px solid var(--linije-boja);
+}
+
+main {
+    background-color: var(--sekundarna-boja);
+}
+
+.clanak_naslov {
+    padding: 2% 2% 0;
+}
+
+.clanak_naslov h2 {
+    padding: 1.5% 0 1%;
+    margin: 0;
+    border-top: 1px solid var(--linije-boja);
+    color: var(--primarna-boja);
+}
+
+.clanak {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.clanak article {
+    width: 33%;
+    padding: 0 1%;
+    cursor: pointer;
+}
+
+.clanak article a {
+    text-decoration: none;
+    color: black;
+}
+
+.clanak article a:hover h3 {
+    color: var(--primarna-boja);
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+article h3 {
+    margin: 1.4% 0 2%;
+    font-size: medium;
+}
+
+footer {
+    background-color: var(--sekundarna-boja);
+    color: var(--linije-boja);
+    margin: 0;
+    padding: 2% 0;
+    border-top: 1px solid var(--linije-boja);
+}
+
+footer p {
+    margin: 0 2%;
+    padding: 1% 0;
+    border-bottom: 1px solid var(--linije-boja);
+    font-size: small;
+}
+
+.vijest_div {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    background-color: var(--sekundarna-boja);
+}
+
+.vijest_div h2 {
+    color: var(--primarna-boja);
+    margin: 0 0 1%;
+    font-size: small;
+    text-transform: uppercase;
+}
+
+.vijest_div h3 {
+    margin: 0 0 1%;
+    font-size: 1.6rem;
+}
+
+.vijest_div p.datum {
+    color: gray;
+    font-weight: 100;
+    font-size: small;
+    margin: 0 0 2%;
+}
+
+.vijest_div img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    margin-bottom: 2%;
+}
+
+.vijest_div .tekst_vijesti {
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.veliko_slovo {
+    float: left;
+    font-size: 4rem;
+    line-height: 0.8;
+    margin-right: 6px;
+    color: var(--primarna-boja);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.admin_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: normal;
+}
+
+.admin_table th {
+    background-color: var(--primarna-boja);
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+.admin_table td {
+    padding: 8px;
+    border-bottom: 1px solid var(--linije-boja);
+}
+
+.admin_table tr:hover td {
+    background-color: var(--pozadinska-boja);
+}
+
+.admin_table a {
+    color: var(--primarna-boja);
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.forma_div {
+    padding: 2%;
+}
+
+.forma_div label {
+    display: block;
+    margin: 12px 0 4px;
+    font-size: small;
+    color: gray;
+}
+
+.forma_div input[type="text"],
+.forma_div textarea,
+.forma_div select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--linije-boja);
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.forma_div textarea {
+    resize: vertical;
+}
+
+.btn {
+    background-color: var(--primarna-boja);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-right: 8px;
+    font-size: medium;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn_delete {
+    background-color: #555;
+}
+
+.poruka {
+    padding: 10px;
+    margin: 10px 2%;
+    background-color: #e6f4ea;
+    border-left: 4px solid green;
+    font-weight: normal;
+}
