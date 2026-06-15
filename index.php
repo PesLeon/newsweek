@@ -29,7 +29,7 @@ define('UPLPATH', 'img/');
             <h2>U.S.</h2>
             <div class="clanak">
                 <?php
-                $query = "SELECT * FROM vijesti WHERE arhiva=0 AND kategorija='U.S.' LIMIT 3";
+                $query = "SELECT * FROM vijesti WHERE arhiva=0 AND kategorija='U.S.' ORDER BY id DESC LIMIT 3";
                 $result = mysqli_query($dbc, $query);
                 while ($row = mysqli_fetch_array($result)) {
                     echo '<article>';
@@ -47,7 +47,7 @@ define('UPLPATH', 'img/');
             <h2>World</h2>
             <div class="clanak">
                 <?php
-                $query = "SELECT * FROM vijesti WHERE arhiva=0 AND kategorija='World' LIMIT 3";
+                $query = "SELECT * FROM vijesti WHERE arhiva=0 AND kategorija='World' ORDER BY id DESC LIMIT 3";
                 $result = mysqli_query($dbc, $query);
                 while ($row = mysqli_fetch_array($result)) {
                     echo '<article>';
